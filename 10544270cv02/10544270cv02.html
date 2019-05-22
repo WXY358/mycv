@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>王璇一個人履歷</title>
+
+    <style type="text/css">
+    html {
+        background-image: url(img/background.jpg); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+    }
+    body {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 50px 100px 20px 100px;
+    }
+    hr{
+      color: white;
+      background-color: rgba(255, 255, 255, 0);
+      text-align: center;
+      height: 10px;
+    }
+	.button {
+	  background-color: #4CAF50; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+
+	}
+	.button2 {background-color: #008CBA;} /* Blue */
+
+    .int1{
+      width: 250px;
+      height: 100px;
+      text-align: left;
+      vertical-align: left;
+    }
+    .int{
+      width: 300px;
+      height: 100px;
+      text-align: left;
+      vertical-align: left;
+    }
+    .me{
+       height:300px;
+       text-align: center;
+       vertical-align: center;
+    }
+    .bgc1{
+      background-color: white;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    .bgc2{
+      background-color: white;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+	.img-thumbnail{
+    	transition: all 0.6s;
+    }
+    .img-thumbnail:hover{
+  		transform: scale(1.5);
+	}
+    .img-thumbnail:hover .col-sm p {
+    	display: block;
+    	height: 100px;
+    	width: 100px;
+    }
+
+
+	* {box-sizing: border-box}
+	.container {
+	  width: 100%;
+	}
+	.skills {
+	  text-align: right;
+	  padding: 10px;
+	  color: white;
+	}
+	.html {width: 90%; background-color: #4CAF50;}
+	.css {width: 80%; background-color: #2196F3;}
+	.js {width: 65%; background-color: #f44336;}
+	.php {width: 50%; background-color: #808080;}
+
+	.accordion {
+	  background-color:#FFF0F5;
+	  color: #444;
+	  cursor: pointer;
+	  padding: 18px;
+	  width: 100%;
+	  border: none;
+	  text-align: left;
+	  outline: none;
+	  font-size: 15px;
+	  transition: 0.4s;
+	}
+
+	.active, .accordion:hover {
+	  background-color:#FFB6C1; 
+	}
+
+	.panel {
+	  padding: 0 18px;
+	  display: none;
+	  background-color: white;
+	  overflow: hidden;
+	}
+
+
+    .main-timeline{
+      overflow: hidden;
+      position: relative;
+    }
+    .main-timeline .timeline{
+      position: relative;
+      margin-top: -79px;
+    }
+    .main-timeline .timeline:first-child{ margin-top: 0; }
+    .main-timeline .timeline:before,
+    .main-timeline .timeline:after{
+      content: "";
+      display: block;
+      width: 100%;
+      clear: both;
+    }
+    .main-timeline .timeline:before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      box-shadow: -8px 0 5px -5px rgba(0, 0, 0, 0.5) inset;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+    .main-timeline .timeline-icon{
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      border: 25px solid transparent;
+      border-top-color: #f44556;
+      border-right-color: #f44556;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      transform: rotate(45deg);
+    }
+    .main-timeline .year{
+      display: block;
+      width: 110px;
+      height: 110px;
+      line-height: 110px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      margin: auto;
+      font-size: 30px;
+      font-weight: bold;
+      color: #f44556;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform: rotate(-45deg);
+    }
+    .main-timeline .timeline-content{
+      width: 35%;
+      float: right;
+      background: #f44556;
+      padding: 30px 20px;
+      margin: 50px 0;
+      z-index: 1;
+      position: relative;
+    }
+    .main-timeline .timeline-content:before{
+      content: "";
+      width: 20%;
+      height: 15px;
+      background: #f44556;
+      position: absolute;
+      top: 50%;
+      left: -20%;
+      z-index: -1;
+      transform: translateY(-50%);
+    }
+    .main-timeline .title{
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0 0 10px 0;
+    }
+    .main-timeline .description{
+      font-size: 16px;
+      color: #fff;
+      line-height: 24px;
+      margin: 0;
+    }
+    .main-timeline .timeline:nth-child(2n):before{ box-shadow: 8px 0 5px -5px rgba(0, 0, 0, 0.5) inset; }
+    .main-timeline .timeline:nth-child(2n) .timeline-icon{ transform: rotate(-135deg); }
+    .main-timeline .timeline:nth-child(2n) .year{ transform: rotate(135deg); }
+    .main-timeline .timeline:nth-child(2n) .timeline-content{ float: left; }
+    .main-timeline .timeline:nth-child(2n) .timeline-content:before{
+      left: auto;
+      right: -20%;
+    }
+    .main-timeline .timeline:nth-child(2n) .timeline-icon{
+      border-top-color: #e97e2e;
+      border-right-color: #e97e2e;
+    }
+    .main-timeline .timeline:nth-child(2n) .year{ color: #e97e2e; }
+    .main-timeline .timeline:nth-child(2n) .timeline-content,
+    .main-timeline .timeline:nth-child(2n) .timeline-content:before{ background: #e97e2e; }
+    .main-timeline .timeline:nth-child(3n) .timeline-icon{
+      border-top-color: #13afae;
+      border-right-color: #13afae;
+    }
+    .main-timeline .timeline:nth-child(3n) .year{ color: #13afae; }
+    .main-timeline .timeline:nth-child(3n) .timeline-content,
+    .main-timeline .timeline:nth-child(3n) .timeline-content:before{ background: #13afae; }
+    .main-timeline .timeline:nth-child(4n) .timeline-icon{
+      border-top-color: #105572;
+      border-right-color: #105572;
+    }
+    .main-timeline .timeline:nth-child(4n) .year{ color: #105572; }
+    .main-timeline .timeline:nth-child(4n) .timeline-content,
+    .main-timeline .timeline:nth-child(4n) .timeline-content:before{ background: #105572; }
+    @media only screen and (max-width: 1199px){
+      .main-timeline .timeline{ margin-top: -103px; }
+      .main-timeline .timeline-content:before{ left: -18%; }
+      .main-timeline .timeline:nth-child(2n) .timeline-content:before{ right: -18%; }
+    }
+    @media only screen and (max-width: 990px){
+      .main-timeline .timeline{ margin-top: -127px; }
+      .main-timeline .timeline-content:before{ left: -2%; }
+      .main-timeline .timeline:nth-child(2n) .timeline-content:before{ right: -2%; }
+    }
+    @media only screen and (max-width: 767px){
+      .main-timeline .timeline{
+        margin-top: 0;
+        overflow: hidden;
+      }
+      .main-timeline .timeline:before,
+      .main-timeline .timeline:nth-child(2n):before{
+        box-shadow: none;
+      }
+      .main-timeline .timeline-icon,
+      .main-timeline .timeline:nth-child(2n) .timeline-icon{
+        margin-top: -30px;
+        margin-bottom: 20px;
+        position: relative;
+        transform: rotate(135deg);
+      }
+      .main-timeline .year,
+      .main-timeline .timeline:nth-child(2n) .year{ transform: rotate(-135deg); }
+      .main-timeline .timeline-content,
+      .main-timeline .timeline:nth-child(2n) .timeline-content{
+        width: 100%;
+        float: none;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        padding: 25px 20px;
+        margin: 0 auto;
+      }
+      .main-timeline .timeline-content:before,
+      .main-timeline .timeline:nth-child(2n) .timeline-content:before{
+        width: 15px;
+        height: 25px;
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%,0);
+      }
+    </style>
+
+  </head>
+  <body>
+    <!--初學者範本-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    	
+
+
+
+  <div class="container">
+
+    <div class="row">
+      <!--個人情況-->
+      <div class="col-4 bgc1">
+        <div>
+          <h1><img src="img/aboutme.png" class="int1"></h1>
+          <h1><img src="img/me.jpg"  class="img-thumbnail me"></h1>
+          <div><a href="https://wxy358.github.io/myself/10544270cv.html"><button class="button button2">我的網站</button></a></div>
+          <h3><img src="img/icon/me.png">王璇一</h3>
+          <h4><img src="img/icon/shengri.png">1999/11/19</h4> 
+          <h4><img src="img/icon/tel.png">0912345678</h4>
+          <h4><a href="mailto:105@gmail.com"><img src="img/icon/email.png">105@gmail.com<a></h4>
+          <h4><a href="https://www.facebook.com/profile.php?id=100013055410760"><img src="img/icon/fb.png"></a>
+          <a href="https://www.instagram.com/erhuomengxin/"><img src="img/icon/ig.png"></a>
+          <a href="https://github.com/WXY358"><img src="img/icon/github.png"></a></h4>
+		</div>
+        <hr>
+        <h1><img src="img/ability.png" class="int1"></h1>
+		<p>HTML</p>
+        <div class="container">
+			  <div class="skills html">90%</div>
+			</div>
+
+			<p>CSS</p>
+			<div class="container">
+			  <div class="skills css">80%</div>
+			</div>
+
+			<p>JavaScript</p>
+			<div class="container">
+			  <div class="skills js">65%</div>
+			</div>
+
+			<p>PHP</p>
+			<div class="container">
+			  <div class="skills php">50%</div>
+			</div>
+      </div>
+
+      <div class="col-8 bgc2">
+        <div class="">
+        	<h1><img src="img/emoji.png" class="int"></h1>
+        	<div class="w3-panel w3-center w3-leftbar w3-sand">
+				<h3><i class="w3-serif w3-xlarge">
+				<span style="line-height:0.6em;opacity:0.2">✔</span>
+				“逆著光行走，任風吹雨打!”</i></h3>
+			</div>
+  			<p align="right"><a href="https://baike.baidu.com/item/%E8%B5%B7%E9%A3%8E%E4%BA%86/22264662">--《起風了》</a></p>
+  			<hr>
+  		</div>	
+        <!--教育信息-->      
+        <div>
+          <h1><img src="img/school.png" class="int"></h1>
+          <table class="table table-borderless">
+              <tr>
+                  <td scope="row">2016.09-2020.06</td>
+                  <td>中原大學</td>
+                  <td>商學院</td>
+                  <td>資訊管理系</td>
+                  <td>本科</td>
+              </tr>
+              <tr>
+                  <td scope="row">2018.03-2018.07</td>
+                  <td>中山大學</td>
+                  <td>資訊管理學院</td>
+                  <td>信息管理與信息系統專業</td>
+                  <td>交換</a></td>
+              </tr>
+          </table>
+        </div>
+        <hr>
+        <div class="bgc rounded">
+            <h1 >
+              <img src="img/outschool.png" class="int">
+            </h1>
+            <table class="table table-borderless">
+                <tr>
+                    <td scope="row">2018.03-2018.07</td>
+                    <td>廣州銀行信用卡中心直銷分期部</td>
+                    <td>業務支持</td>
+                    <td>實習</td>
+                </tr>
+                <tr>
+                    <td scope="row">2018.05-2018.11</td>
+                    <td>友成·唯品會“喚醒千年之美”大學生非遺傳承獎學金項目</td>
+                    <td>東巴紙</td>
+                    <td>組長</td>
+                </tr>
+                <tr>
+                    <td scope="row">2018.11-2019.01</td>
+                    <td>GSVC全球社會企業創新創業大賽大中華賽區100強</td>
+                    <td>非常嫩</td>
+                    <td>組員</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+
+
+        <!--我的故事-->
+        <div>
+        	<h1><img src="img/story.png" class="int"></h1>    	        
+	        <button class="accordion">中原南望近中山</button>
+			<div class="panel">
+			  <p>· 一年後的回憶錄--<a href="https://mp.weixin.qq.com/s/bDFT9FeYTAwUcFi0ezw5Lg">中原南望近中山</a></p>
+			  <p>· 為了獎學金寫的交換心得--<a href="http://oia.cycu.edu.tw/exchange.experience/detail/webSN/362/sn/369">中山大學交換心得</a></p>
+			  <p>· 感謝中原給我機會讓我成長，感謝中大給我新生</p>
+			  <p>· 交換是一件很神奇的事情，不管去哪，哪怕去的明明是大陸，你還是有各種感動</p>
+			  <p>· 這是個高CP值的買賣：你會遇到很多人很多事，又去挑戰自己，開創不一樣的精彩</p>
+			  <img src="img/zhongda.jpg" class="img-thumbnail">
+			</div>
+			<p></p>
+
+			<button class="accordion">雲南·去座城，去做成</button>
+			<div class="panel">
+			  <p>· 比賽回憶錄--<a href="https://mp.weixin.qq.com/s/gWMlHWAAR_rBWEXsLU9n2Q">你知道吗？我们，最后去了香格里拉</a></p>
+			  <p>· 大賽-造紙小分隊推文--<a href="http://www.sohu.com/a/256456023_225998">“纸”无止境——非遗东巴纸造纸技艺</a></p>
+			  <p>· 要感謝那個在交換中很混的自己，只有7學分才能各種搞事情</p>
+			  <p>· 多多嘗試才會發現，人生有無限種可能</p>
+			  <p>· </p>
+			  <img src="img/zaozhi.jpeg" class="img-thumbnail ">
+			</div>
+			<p></p>
+
+			<button class="accordion">你好，2018</button>
+			<div class="panel">
+			  <p>· 2017寫給未來的自己--<a href="https://mp.weixin.qq.com/s/kptwCZvrxWkLrfhuiMkTSw">你好，2018</a></p>
+			  <p>· 拿到獎學金和交換的感覺真的超級棒，18周歲的自己總覺得被承認了</p>
+			  <p>· 遇到的事情總會讓你成長，直到遇見更好的自己</p>
+			  <p>· 感謝朋友的陪伴</p>
+			  <img src="img/yuxuan.jpg" class="img-thumbnail">
+			</div>
+			<p></p>
+        </div>
+        <script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].addEventListener("click", function() {
+			    this.classList.toggle("active");
+			    var panel = this.nextElementSibling;
+			    if (panel.style.display === "block") {
+			      panel.style.display = "none";
+			    } else {
+			      panel.style.display = "block";
+			    }
+			  });
+			}
+		</script>
+
+        <hr>
+        <!--時間軸-->
+        <div>
+          <h1><img src="img/time.png" class="int"></h1>
+          <div class="demo">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="main-timeline">
+                    <div class="timeline">
+                      <div class="timeline-icon"><span class="year">2019</span></div>
+                      <div class="timeline-content">
+                        <h3 class="title">大三 · 中原大學</h3>
+                        
+                        <p class="description">2019.06·專題·憶·起</p>
+                        <p class="description">2019.01·GSVC商創大賽</p>
+                        <p class="description">2019.01·哈爾濱挑戰中國</p>
+                      </div>
+
+                    </div>
+                    <div class="timeline">
+                      <div class="timeline-icon"><span class="year">2018</span></div>
+                      <div class="timeline-content">
+                        <h3 class="title">大二 · 中山大學</h3>
+                        <p class="description">
+                          <ul class="description">
+                          	<p class="description">2018.11·北京·頒獎典禮</p>
+                        	<p class="description">2018.07·雲南·實地調研</p>
+                        	<p class="description">2018.03·廣州·銀行實習</p>
+                      </div>
+                    </div>
+
+                    <div class="timeline">
+                      <div class="timeline-icon"><span class="year">2017</span></div>
+                      <div class="timeline-content">
+                        <h3 class="title">大二 · 中原大學</h3>
+	                	<p class="description">2017.12·取得交換資格</p>
+	                	<p class="description">2017.11·優秀陸生獎學金</p>
+	                	<p class="description">2017.06·大崗國中專案</p>
+                      </div>
+                    </div>
+
+                    <div class="timeline">
+                      <div class="timeline-icon"><span class="year">2016</span></div>
+                      <div class="timeline-content">
+                        <h3 class="title">大一 · 中原大學</h3>
+                        <p class="description">2016.12·管理學·募發票</p>
+                        <p class="description">2016.09·報道中原</p>
+                        <p class="description">2016.07·錄取中原大學</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>        
+
+      </div>
+    </div>
+  </div>  
+
+    <div style="clear: both"></div>
+ 
+  </body>
+</html>
